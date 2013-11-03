@@ -1,0 +1,834 @@
+/*
+Theme Name: LunarLove S
+Theme URI: http://aiyou.im/
+Author: Aivier
+Author URI: http://aiyou.im
+Description: Made With Love / 简单即是美.
+Version: 1.0
+License: GNU General Public License
+Text Domain: lunarlove
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ LunarLove is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+    font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+
+.site {
+    width:910px;
+    margin:0 auto;
+    margin-top:30px;
+}
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+::selection { background:#FF82C1; color:#FFFFFF; }
+
+::-moz-selection { background:#FF82C1; color:#FFFFFF; } 
+
+::-webkit-selection { background:#FF82C1; color:#FFFFFF; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    cursor:default;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 0.9em;
+    cursor:default;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 2em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, em, i {
+	font-style: italic;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+    text-decoration:none;
+	color:#62A6E4;
+    transition: color 200ms ease-in-out;
+    -webkit-transition: color 200ms ease-in-out;
+}
+a:visited {
+	color:#62A6E4;
+}
+a:hover,
+a:focus,
+a:active {
+    color:#005CAD;
+}
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	left: 0;
+	position: absolute;
+	top: 1.5em;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.search-form {
+    margin-bottom:15px;
+}
+.search-field {
+    vertical-align:middle;
+}
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-main .gallery dd {
+	margin: 0;
+}
+.site-main .gallery-columns-4 .gallery-item {
+}
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* =Head
+----------------------------------------------- */
+.site-title {
+    font-size:45px;
+    letter-spacing:2px;
+    text-align:center;
+    text-decoration:none;
+    text-shadow:0px 0px 1px #4A4A4A;
+}
+.site-title a {
+    color:#696969;
+    transition: letter-spacing 700ms ease-in-out,color 700ms,text-shadow 700ms;
+    -webkit-transition: letter-spacing 700ms ease-in-out,color 700ms,text-shadow 700ms;
+}
+.site-title a:hover {
+    letter-spacing:40px;
+    color:#FF8FCF;
+    text-shadow:0px 0px 1px #FF8FCF;
+}
+.site-description {
+    text-align:center;
+    font-style:italic;
+    font-size:12px;
+    color:#B8B8B8;
+}
+.main-navigation{
+    margin-top:15px;
+    margin-bottom:15px;
+    border-top:1px solid #EDEDED;
+    border-bottom:1px solid #EDEDED;
+}
+.main-navigation li {
+    width:0 auto;
+    margin-left:10px;
+    margin-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:18px;
+    transition: background 200ms ease-in-out;
+    -webkit-transition: background 200ms ease-in-out;
+}
+.main-navigation a {
+    color:#919191;
+    padding-left:5px;
+    padding-right:5px;
+}
+.main-navigation li:hover {
+    background-color:#EAEAEA;
+}
+.menu-search {
+    float:right;
+    height:21px;
+    margin-top:4px;
+    margin-bottom:3px;
+}
+/* =Main Artical
+----------------------------------------------- */
+.entry-title {
+    font-size:28px;
+}
+.entry-title a {
+    color:#505050;
+    transition: text-shadow 200ms ease-in-out;
+    -webkit-transition: text-shadow 200ms ease-in-out;
+}
+.entry-title a:hover {
+    text-shadow:0px 0px 1px #4A4A4A;
+}
+.posted-on {
+    font-size:14px;
+}
+.entry-header span a {
+    color:#B1B1B1;
+}
+.comments-link a {
+    color:#B1B1B1;
+}
+.entry-content p,.page-content p {
+    color:#6E6E6E;
+}
+.entry-content {
+    border-bottom:2px dashed #EEE;
+    padding-bottom:10px;
+}
+.entry-meta span {
+    color:#B1B1B1;
+}
+.page-title {
+    font-size:28px;
+    color:#505050;
+}
+.more-link {
+    transition: color 200ms ease-in-out;
+    -webkit-transition: color 200ms ease-in-out;
+}
+blockquote {
+    background:#F7F7F7;
+    border:1px dotted #575757;
+    border-radius: 5px;
+    padding:10px 10px 10px 10px;
+    margin-bottom:10px;
+    font-style:italic;
+}
+blockquote p {
+    margin:0 auto;
+}
+/* =Footer
+----------------------------------------------- */
+.site-footer {
+    border-top:1px solid #EDEDED;
+}
+.footer-left {
+    float:left;
+}
+.footer-right {
+    float:right;
+}
+.site-footer span {
+    color:#828282;
+    margin-top:3px;
+    margin-left:3px;
+    margin-right:3px;
+}
+.site-footer {
+    margin-bottom:15px;
+}
+.admin-login {
+    cursor:default;
+    color:#FF6700 !important;
+}
+/* =Comment
+----------------------------------------------- */
+.comments-title {
+    font-size:20px;
+}
+.comment-list {
+    margin-top:20px;
+}
+.comment-body {
+    margin-top:10px;
+    background:#F7F7F7;
+    border:1px dotted #575757;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+}
+.comment-content {
+    margin-top:10px;
+    display:flex;
+}
+.comment-time {
+    font-size:14px;
+    font-style:italic;
+    color:#6E6E6E;
+}
+.comment-metadata edit-link {
+    font-size:14px;
+}
+.avatar {
+    border:1px solid #CCCCCC;
+}
+.edit-link {
+    display:inline-block;
+}
+.comment-reply-title {
+    color:#000000;
+    font-size:20px;
+    margin-top:30px;
+}
+.comment-form input{
+    display:block;
+}
+.required {
+    color:red;
+}
+input, textarea {
+	padding: 4px;
+	font-size: 1em;
+	background: #fff;
+	border: 1px solid #AAA;
+	font-family: "Microsoft YaHei","Microsoft YaHei";
+    transition: border 200ms ease-in-out;
+    -webkit-transition: border 200ms ease-in-out;
+}
+
+input,button,select,textarea {
+	outline:none
+}
+textarea {
+	resize:none
+}
+input[type=text]:hover,textarea:hover {
+	border: 1px solid #0091F3;
+}
+
+input[type=text]:focus,textarea:focus {
+	box-shadow: 0px 0px 2px #55A1D4;
+	border: 1px solid #0091F3;
+}
+.comment-awaiting-moderation {
+    color:red;
+}
+.comment-author {
+    float:left;
+    margin-right:10px;
+    vertical-align:middle;
+}
+
+.action {
+    float:right;
+    display:inline-flex;
+}
