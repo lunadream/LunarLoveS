@@ -6,6 +6,7 @@ Author URI: http://aiyou.im
 Description: Made With Love / 简单即是美.
 Version: 1.0
 License: GNU General Public License
+License URI: license.txt
 Text Domain: lunarlove
 Domain Path: /languages/
 Tags:
@@ -50,9 +51,19 @@ html {
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 body {
-	background: #fff;
+	background: #FFFFFD;
     font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
 }
+
+    ::-webkit-scrollbar-thumb:vertical{ 
+        background-color:#FF82C1; 
+    } 
+    ::-webkit-scrollbar{ 
+        width:8px; 
+        background:#FFF; 
+    }
+
+
 article,
 aside,
 details,
@@ -128,7 +139,8 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 0.9em;
+	margin-bottom: 10px;
+    margin-top:5px;
     cursor:default;
 }
 
@@ -484,7 +496,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 10px 0 0 0;
 }
 .page-links {
 	clear: both;
@@ -670,6 +682,7 @@ object {
 }
 .menu-search {
     float:right;
+    border:1px solid #FFFFFF !important;
     height:21px;
     margin-top:4px;
     margin-bottom:3px;
@@ -697,11 +710,11 @@ object {
     color:#B1B1B1;
 }
 .entry-content p,.page-content p {
-    color:#6E6E6E;
+    color:#404040;
 }
 .entry-content {
     border-bottom:2px dashed #EEE;
-    padding-bottom:10px;
+    padding-bottom:20px;
 }
 .entry-meta span {
     color:#B1B1B1;
@@ -714,9 +727,10 @@ object {
     transition: color 200ms ease-in-out;
     -webkit-transition: color 200ms ease-in-out;
 }
-blockquote {
-    background:#F7F7F7;
-    border:1px dotted #575757;
+blockquote p {
+    background:#FAFAFA;
+    color:#6E6E6E !important;
+    border:1px dashed #999999;
     border-radius: 5px;
     padding:10px 10px 10px 10px;
     margin-bottom:10px;
@@ -759,8 +773,9 @@ blockquote p {
 }
 .comment-body {
     margin-top:10px;
-    background:#F7F7F7;
-    border:1px dotted #575757;
+    background:#FCFCFC;
+    border-radius:3px;
+    border:1px dotted #D9D9D9;
     padding-top:10px;
     padding-left:10px;
     padding-right:10px;
@@ -773,7 +788,7 @@ blockquote p {
 .comment-time {
     font-size:14px;
     font-style:italic;
-    color:#6E6E6E;
+    color:#404040;
 }
 .comment-metadata edit-link {
     font-size:14px;
@@ -812,7 +827,7 @@ textarea {
 	resize:none
 }
 input[type=text]:hover,textarea:hover {
-	border: 1px solid #0091F3;
+	border: 1px solid #0091F3 !important;
 }
 
 input[type=text]:focus,textarea:focus {
@@ -826,6 +841,10 @@ input[type=text]:focus,textarea:focus {
     float:left;
     margin-right:10px;
     vertical-align:middle;
+}
+
+.comment-notes {
+    margin-top:15px;
 }
 
 .action {
