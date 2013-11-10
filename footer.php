@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'lunarlove_credits' ); ?>
-			<span class="footer-left">Made With Love<span class="admin-login" title="三连击以登陆管理员后台..." onclick="atclick();" >@</span>2013</span>
+			<span class="footer-left">Made With Love<span class="admin-login" title="三连击以登陆管理员后台..." onclick="atclick();" >@</span><?php echo date('Y') ?></span>
 			<span class="footer-right">Theme is <a href="http://aiyou.im">"LunarLove S"</a></span>
 			
 		</div><!-- .site-info -->
