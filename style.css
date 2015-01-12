@@ -4,7 +4,7 @@ Theme URI: http://aiyou.im/
 Author: Aivier
 Author URI: http://aiyou.im
 Description: Made With Love / 简单即是美.
-Version: 1.0
+Version: 1.10R
 License: GNU General Public License
 License URI: license.txt
 Text Domain: lunarlove
@@ -99,7 +99,13 @@ a img {
 }
 
 .site {
-    width:910px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    box-shadow: 0px 0px 30px #5c5c5c;
+    width:1200px;
     margin:0 auto;
     margin-top:30px;
 }
@@ -634,11 +640,12 @@ object {
 /* =Head
 ----------------------------------------------- */
 .site-title {
+    margin-top: 15px;
     font-size:45px;
     letter-spacing:2px;
     text-align:center;
     text-decoration:none;
-    text-shadow:0px 0px 1px #4A4A4A;
+    
 }
 .site-title a {
     color:#696969;
@@ -646,9 +653,7 @@ object {
     -webkit-transition: letter-spacing 700ms ease-in-out,color 700ms,text-shadow 700ms;
 }
 .site-title a:hover {
-    letter-spacing:40px;
-    color:#FF8FCF;
-    text-shadow:0px 0px 1px #FF8FCF;
+    text-shadow:0px 0px 1px #4A4A4A;
 }
 .site-description {
     text-align:center;
@@ -713,7 +718,7 @@ object {
     color:#404040;
 }
 .entry-content {
-    border-bottom:2px dashed #EEE;
+    border-bottom:1px dashed #EEE;
     padding-bottom:20px;
 }
 .entry-meta span {
@@ -757,11 +762,14 @@ blockquote p {
     margin-right:3px;
 }
 .site-footer {
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 .admin-login {
     cursor:default;
     color:#FF6700 !important;
+}
+.site-info {
+    font-size: 14px;
 }
 /* =Comment
 ----------------------------------------------- */

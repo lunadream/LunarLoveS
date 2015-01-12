@@ -14,8 +14,18 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
+    
+<script type="text/javascript">
+     var bodyBgs = [];
+     bodyBgs[0] = "image/bg_1.jpg";
+     bodyBgs[1] = "image/bg_2.jpg";
+
+     var randomBgIndex = Math.round( Math.random() * 1 );
+     document.write("<style>body{background:url( <? bloginfo('stylesheet_directory')?>/" + bodyBgs[randomBgIndex] + ") no-repeat 50% 0}</style>");
+</script>
+
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -32,7 +42,7 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'lunarlove' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-            <form method="get" action="<?php echo esc_url( home_url( '' ) )?>"><input type="text" name="s" class="menu-search" placeholder="Enter to search..." required /></form>
+            <form method="get" action="<?php echo esc_url( home_url( '' ) )?>"><input type="text" name="s" class="menu-search" placeholder="Type to search..." required /></form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
