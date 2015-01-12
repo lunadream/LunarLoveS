@@ -19,8 +19,8 @@
 			<span class="tags-links"><?php printf( __( '%1$s', 'lunarlove' ), $tags_list ); ?></span> /
 			<?php endif; // End if $tags_list ?>
             
-            <span class="comments-link"><?php comments_popup_link( __( 'No comment', 'lunarlove' ), __( '1 Comment', 'lunarlove' ), __( '% Comments', 'lunarlove' ) ); ?></span>
-            <?php edit_post_link( __( 'Edit', 'lunarlove' ), ' / <span class="edit-link">', '</span>' ); ?>
+            <span class="comments-link"><?php comments_popup_link( __( '没有评论', 'lunarlove' ), __( '1 条评论', 'lunarlove' ), __( '% 条评论', 'lunarlove' ) ); ?></span>
+            <?php edit_post_link( __( '编辑', 'lunarlove' ), ' / <span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
         
 		<?php endif; ?>

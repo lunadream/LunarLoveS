@@ -31,7 +31,7 @@ function lunarlove_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'lunarlove' ); ?></h1>
+		
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -82,10 +82,10 @@ function lunarlove_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
-					<?php printf( __( '%s <span class="attime">at </span>', 'lunarlove' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="attime">在 </span>', 'lunarlove' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 						<time class="comment-time" datetime="<?php comment_time( 'c' ); ?>">
 							<?php printf( _x( '%1$s %2$s', '1: date, 2: time', 'lunarlove' ), get_comment_date(), get_comment_time() ); ?>
-						</time><span class="says"><?php _e("says:","lunarlove");?></span>
+						</time><span class="says"><?php _e("说:","lunarlove");?></span>
 					
 					
 				</div><!-- .comment-metadata -->
@@ -109,7 +109,7 @@ function lunarlove_comment( $comment, $args, $depth ) {
 				) ) );
 			?>
                 &nbsp;
-            <?php edit_comment_link( __( 'Edit', 'lunarlove' ), '', '' ); ?>
+            <?php edit_comment_link( __( '编辑', 'lunarlove' ), '', '' ); ?>
             </div>
 		</article><!-- .comment-body -->
 
