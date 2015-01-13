@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: LunarLove S
 Theme URI: http://aiyou.im/
 Author: Aivier
@@ -123,7 +123,6 @@ textarea {
 	color: #404040;
 	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
 	font-size: 16px;
-	font-size: 1.6rem;
 	line-height: 1.5;
 }
 ::selection { background:#FF82C1; color:#FFFFFF; }
@@ -273,7 +272,7 @@ input[type="radio"] {
 }
 input[type="search"] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing:    content-box;
 	box-sizing:         content-box;
 }
@@ -433,21 +432,11 @@ a:active {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
 .nav-con {
     margin-left: auto;
     margin-right: auto;
     max-width: 1160px;
-    min-width: 860px;
+    min-width: 960px;
     height: 50px;
 }
 /* =Content
@@ -628,6 +617,7 @@ object {
     color:#B8B8B8;
 }
 .main-navigation{
+    min-width: 960px;
     height: 50px;
     line-height: 50px;
     margin-top: 0;
@@ -651,10 +641,11 @@ object {
 }
 .menu-search {
     float:right;
+    font-size: 16px;
     background-color: rgba(255,255,255,0.5);
     border:1px solid #E0E0E0 !important;
     width: 130px;
-    /*height:24px;*/
+    height:21px;
     margin-top:10px;
     transition: width 0.3s ease-in,background 0.3s ease-in;
 }
@@ -711,6 +702,9 @@ object {
     border-bottom: 1px solid #EBEBEB;
     border-top: 1px solid #EBEBEB;
     border-right: 1px solid #EBEBEB;
+}
+.entry-meta {
+    font-size: 14px;
 }
 .entry-meta span {
     color:#B1B1B1;
