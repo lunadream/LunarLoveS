@@ -28,7 +28,7 @@ get_header(); ?>
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', 'lunarlove' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( '作者: %s', 'lunarlove' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -36,13 +36,13 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'lunarlove' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( '日: %s', 'lunarlove' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'lunarlove' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( '月: %s', 'lunarlove' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'lunarlove' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( '年: %s', 'lunarlove' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'lunarlove' );

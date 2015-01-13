@@ -33,9 +33,8 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'lunarlove' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'lunarlove' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'lunarlove' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; 之前的评论', 'lunarlove' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( '之后的评论 &rarr;', 'lunarlove' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -53,9 +52,8 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'lunarlove' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'lunarlove' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'lunarlove' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; 之前的评论', 'lunarlove' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( '之后的评论 &rarr;', 'lunarlove' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 

@@ -106,7 +106,8 @@ a img {
     padding-bottom: 10px;
     padding-right: 30px;
     box-shadow: 0px 0px 30px #5c5c5c;
-    width:1200px;
+    max-width:1100px;
+    min-width: 900px;
     margin:0 auto;
     margin-top:30px;
     margin-bottom:30px;
@@ -153,7 +154,6 @@ p {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 2em;
 }
 dt {
 	font-weight: bold;
@@ -232,7 +232,7 @@ select,
 textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	vertical-align: middle; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
 button,
@@ -446,7 +446,8 @@ a:active {
 .nav-con {
     margin-left: auto;
     margin-right: auto;
-    width: 1260px;
+    max-width: 1160px;
+    min-width: 860px;
     height: 50px;
 }
 /* =Content
@@ -547,8 +548,8 @@ object {
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
+    overflow: hidden;
 	margin: 0 0 1.5em;
-	overflow: hidden;
 }
 [class*="navigation"] .nav-previous {
 	float: left;
@@ -623,7 +624,6 @@ object {
 }
 .site-description {
     text-align:center;
-    font-style:italic;
     font-size:12px;
     color:#B8B8B8;
 }
@@ -642,7 +642,7 @@ object {
     -webkit-transition: background 200ms ease-in-out;
 }
 .main-navigation a {
-    color:#333333;
+    color:#949494;
     padding-left:5px;
     padding-right:5px;
 }
@@ -652,22 +652,27 @@ object {
 .menu-search {
     float:right;
     background-color: rgba(255,255,255,0.5);
-    border:1px solid #CCCCC !important;
+    border:1px solid #E0E0E0 !important;
     width: 130px;
-    height:24x;
+    /*height:24px;*/
     margin-top:10px;
-    transition: width 0.3s ease-in;
+    transition: width 0.3s ease-in,background 0.3s ease-in;
 }
 .menu-search:hover {
+    background-color: rgba(255,255,255,0.8);
     width: 185px;
 }
 .menu-search:focus {
     width: 185px;
 }
+.current_page_item a {
+    background-color: #FFFFFF;
+    color: #000000 !important;
+}
 /* =Main Artical
 ----------------------------------------------- */
 .entry-title {
-    font-size:28px;
+    font-size:24px;
 }
 .entry-title a {
     color:#505050;
@@ -681,20 +686,35 @@ object {
     font-size:14px;
 }
 .entry-header span a {
-    color:#B1B1B1;
+    color:#BFBFBF;
 }
 .comments-link a {
-    color:#B1B1B1;
+    color:#BFBFBF;
 }
 .entry-content p,.page-content p {
+    font-size: 15px;
     color:#404040;
 }
 .entry-content {
     border-bottom:1px dashed #EEE;
     padding-bottom:20px;
 }
+.entry-content h1 {
+    font-size: 28px;
+}
+.entry-content h2 {
+    font-size: 18px;
+    background-color: #FBFBFB;
+    padding:10px 20px 9px 20px;
+    line-height: 18px;
+    border-left: 3px solid #FF3366;
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+}
 .entry-meta span {
     color:#B1B1B1;
+    font-size: 14px;
 }
 .page-title {
     font-size:28px;
@@ -741,12 +761,13 @@ blockquote p {
     color:#FF3366 !important;
 }
 .site-info {
+    margin-top: 15px;
     font-size: 14px;
 }
 /* =Comment
 ----------------------------------------------- */
-.comments-title {
-    font-size:20px;
+.comments-area {
+    font-size: 14px;
 }
 .comment-list {
     margin-top:20px;
@@ -760,18 +781,14 @@ blockquote p {
     padding-top:15px;
     padding-left:15px;
     padding-right:10px;
-    padding-bottom:1px;
 }
 .comment-content {
-    margin-top:10px;
+    word-break: break-all;
     display:flex;
 }
 .comment-time {
     font-size:14px;
     color:#404040;
-}
-.comment-metadata edit-link {
-    font-size:14px;
 }
 .avatar {
     border:1px solid #CCCCCC;
@@ -780,8 +797,8 @@ blockquote p {
     display:inline-block;
 }
 .comment-reply-title {
+    font-size: 18px;
     color:#000000;
-    font-size:20px;
     margin-top:30px;
 }
 .comment-form input{
@@ -829,9 +846,20 @@ input[type=text]:focus,textarea:focus {
 
 .action {
     float:right;
+    margin-top: -15px;
+    margin-bottom: 5px;
     display:inline-flex;
 }
-.parent {
+.depth-1 {
     margin-top: 10px;
     border-top: 1px dotted #D9D9D9;
+}
+.depth-2 {
+    margin-left: 28px;
+}
+.depth-3 {
+    margin-left: 28px;
+}
+.comments-title {
+    font-size: 16px;
 }

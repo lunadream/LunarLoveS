@@ -41,11 +41,11 @@ function lunarlove_content_nav( $nav_id ) {
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&lt;&nbsp;&lt;</span> Older posts', 'lunarlove' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&lt;&nbsp;&lt;</span> 之前的文章', 'lunarlove' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&gt;&nbsp;&gt;</span>', 'lunarlove' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( '之后的文章 <span class="meta-nav">&gt;&nbsp;&gt;</span>', 'lunarlove' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -77,7 +77,7 @@ function lunarlove_comment( $comment, $args, $depth ) {
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body clear">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
-					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, 70 ); ?>
+					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, 48 ); ?>
 					
 				</div><!-- .comment-author -->
 
