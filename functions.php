@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 1100; /* pixels */
 
 if ( ! function_exists( 'lunarlove_setup' ) ) :
 /**
@@ -66,7 +66,7 @@ add_action( 'after_setup_theme', 'lunarlove_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
- */
+ 
 function lunarlove_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'lunarlove' ),
@@ -78,7 +78,7 @@ function lunarlove_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'lunarlove_widgets_init' );
-
+*/
 /**
  * Enqueue scripts and styles
  */
