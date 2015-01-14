@@ -1,10 +1,10 @@
-﻿/*
+/*
 Theme Name: LunarLove S
-Theme URI: http://aiyou.im/
-Author: Aivier
+Theme URI: http://aiyou.im
+Author: Ariane
 Author URI: http://aiyou.im
 Description: Made With Love / 简单即是美.
-Version: 2.00R
+Version: 2.00M2
 License: GNU General Public License
 License URI: license.txt
 Text Domain: lunarlove
@@ -35,7 +35,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -53,7 +53,7 @@ html {
 body {
 	background: #FFFFFD;
     background-attachment:fixed !important;
-    font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+    font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
 }
 
     ::-webkit-scrollbar-thumb:vertical{ 
@@ -121,7 +121,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -171,7 +171,7 @@ address {
 }
 pre {
 	background: #eee;
-	font-family:"Roboto","Microsoft YaHei","方正兰亭黑_GBK","文泉驿微米黑";
+	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
@@ -557,7 +557,8 @@ object {
 .comment-content a {
 	word-wrap: break-word;
 }
-.bypostauthor {
+.form-allowed-tags {
+    display: none;
 }
 
 
@@ -632,7 +633,7 @@ object {
     -webkit-transition: background 200ms ease-in-out;
 }
 .main-navigation a {
-    color:#949494;
+    color:#747474;
     padding-left:5px;
     padding-right:5px;
 }
@@ -642,7 +643,7 @@ object {
 .menu-search {
     float:right;
     font-size: 16px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.3);
     border:1px solid #E0E0E0 !important;
     width: 130px;
     height:21px;
@@ -650,7 +651,7 @@ object {
     transition: width 0.3s ease-in,background 0.3s ease-in;
 }
 .menu-search:hover {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     width: 185px;
 }
 .menu-search:focus {
@@ -715,6 +716,7 @@ object {
     color:#505050;
 }
 .more-link {
+    float:right;
     transition: color 200ms ease-in-out;
     -webkit-transition: color 200ms ease-in-out;
 }

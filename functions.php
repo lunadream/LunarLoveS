@@ -87,7 +87,7 @@ function lunarlove_scripts() {
 
 	wp_enqueue_script( 'lunarlove-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
     
-    wp_enqueue_script( 'lunarlove-am', get_template_directory_uri() . '/js/am.js', array(), '20131030', true );
+    wp_enqueue_script( 'lunarlove-add-functions', get_template_directory_uri() . '/js/functions.js', array(), '20150114', true );
 
 	wp_enqueue_script( 'lunarlove-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -120,3 +120,38 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function unblock_gravatar( $avatar ) {
+    $avatar = str_replace( array( 'www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com' ), '7u2jre.com1.z0.glb.clouddn.com', $avatar );
+    return $avatar;
+}
+add_filter( 'get_avatar', 'unblock_gravatar' );
+
+/* comment_mail_notify v1.0 by willin kan. (所有回复都发邮件) */
+function comment_mail_notify($comment_id) {
+  $comment = get_comment($comment_id);
+  $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
+  $spam_confirmed = $comment->comment_approved;
+  if (($parent_id != '') && ($spam_confirmed != 'spam')) {
+    $wp_email = 'no-reply@mi.' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME'])); //e-mail 发出点, no-reply 可改为可用的 e-mail.
+    $to = trim(get_comment($parent_id)->comment_author_email);
+    $subject = '您在 [' . get_option("blogname") . '] 的评论被回复啦~';
+    $message = '
+    <div style="background-color:#eef2fa; border:1px solid #d8e3e8; color:#111; padding:0 15px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;">
+      <p>' . trim(get_comment($parent_id)->comment_author) . ', 您好!</p>
+      <p>您曾在《' . get_the_title($comment->comment_post_ID) . '》的评论:<br />'
+       . trim(get_comment($parent_id)->comment_content) . '</p>
+      <p>' . trim($comment->comment_author) . ' 给您的回复:<br />'
+       . trim($comment->comment_content) . '<br /></p>
+      <p>您可以点击 <a href="' . htmlspecialchars(get_comment_link($parent_id,array("type" => "all"))) . '">查看回复的完整內容</a></p>
+      <p>欢迎再度光临 <a href="' . get_option('home') . '">' . get_option('blogname') . '</a></p>
+      <p>(此邮件由系统自动发送，请勿回复.)</p>
+    </div>';
+    $from = "From: \"" . get_option('blogname') . "\" <$wp_email>";
+    $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
+    wp_mail( $to, $subject, $message, $headers );
+    //echo 'mail to ', $to, '<br/> ' , $subject, $message; // for testing
+  }
+}
+add_action('comment_post', 'comment_mail_notify');
+// -- END ----------------------------------------
