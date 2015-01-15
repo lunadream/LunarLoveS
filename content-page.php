@@ -11,7 +11,6 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php edit_post_link( __( '编辑', 'lunarlove' ), ' <span class="edit-link">', '</span>' ); ?>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

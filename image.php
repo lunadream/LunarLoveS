@@ -9,13 +9,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area image-attachment">
 		<main id="main" class="site-main" role="main">
-
 		<?php while ( have_posts() ) : the_post(); ?>
-
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
 					<div class="entry-meta">
 						<?php
 							$metadata = wp_get_attachment_metadata();
@@ -28,17 +25,14 @@ get_header(); ?>
 								esc_url( get_permalink( $post->post_parent ) ),
 								get_the_title( $post->post_parent )
 							);
-
 							edit_post_link( __( 'Edit', 'lunarlove' ), '<span class="edit-link">', '</span>' );
 						?>
 					</div><!-- .entry-meta -->
-
 					<nav role="navigation" id="image-navigation" class="image-navigation">
 						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'lunarlove' ) ); ?></div>
 						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'lunarlove' ) ); ?></div>
 					</nav><!-- #image-navigation -->
 				</header><!-- .entry-header -->
-
 				<div class="entry-content">
 					<div class="entry-attachment">
 						<div class="attachment">
@@ -51,7 +45,6 @@ get_header(); ?>
 						</div><!-- .entry-caption -->
 						<?php endif; ?>
 					</div><!-- .entry-attachment -->
-
 					<?php
 						the_content();
 						wp_link_pages( array(
@@ -60,18 +53,13 @@ get_header(); ?>
 						) );
 					?>
 				</div><!-- .entry-content -->
-
 			</article><!-- #post-## -->
-
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )
 					comments_template();
 			?>
-
 		<?php endwhile; // end of the loop. ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>

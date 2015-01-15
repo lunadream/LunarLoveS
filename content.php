@@ -7,7 +7,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php lunarlove_posted_on(); ?>
@@ -22,10 +21,8 @@
             <span class="comments-link"><?php comments_popup_link( __( '没有评论', 'lunarlove' ), __( '1 条评论', 'lunarlove' ), __( '% 条评论', 'lunarlove' ) ); ?></span>
             <?php edit_post_link( __( '编辑', 'lunarlove' ), ' / <span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
-        
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -41,5 +38,4 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
 </article><!-- #post-## -->

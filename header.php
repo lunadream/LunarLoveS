@@ -22,7 +22,6 @@
      bodyBgs[3] = "image/bg_3.jpg";
      bodyBgs[4] = "image/bg_4.jpg";
      bodyBgs[5] = "image/bg_5.jpg";
-
      //var randomBgIndex = Math.round( Math.random() * 4 );
      rnd.today=new Date();
      rnd.seed=rnd.today.getTime();
