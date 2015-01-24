@@ -38,7 +38,7 @@
 </head>
 <body <?php body_class(); ?>>
     <div id="site-navigation" class="main-navigation" role="navigation">
-			<div id="nav-con" class="nav-con"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<div id="nav-con" class="nav-con"><?php wp_nav_menu( array( 'theme_location' => 'primary','walker' => new Description_Walker()) ); ?>
             <form method="get" action="<?php echo esc_url( home_url( '' ) )?>"><input type="text" name="s" class="menu-search" placeholder="Type to search..." required /></form></div>
 		</div><!-- #site-navigation -->  
 <div id="page" class="hfeed site">
