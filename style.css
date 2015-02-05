@@ -252,7 +252,7 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	box-shadow: 0px 0px 5px #e2e2e2;
+	box-shadow: 0px 0px 2px #e2e2e2;
     background-color: #FFFFFF;
 }
 button:focus,
@@ -646,12 +646,12 @@ object {
 .menu-search {
     float:right;
     font-size: 16px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.5);
     border:1px solid #E0E0E0 !important;
     width: 130px;
     height:21px;
     margin-top:10px;
-    transition: width 0.3s ease-in,background 0.3s ease-in;
+    transition: width 300ms ease-in,background 300ms ease-in,border 200ms ease-in-out,box-shadow 200ms ease-in-out;
 }
 .menu-search:hover {
     background-color: rgba(255,255,255,0.9);
@@ -675,7 +675,7 @@ object {
     -webkit-transition: text-shadow 200ms ease-in-out;
 }
 .entry-title a:hover {
-    text-shadow:0px 0px 1px #4A4A4A;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.3);
 }
 .posted-on {
     font-size:14px;
@@ -702,7 +702,7 @@ object {
     background-color: #FBFBFB;
     padding:10px 20px 9px 20px;
     line-height: 18px;
-    border-left: 3px solid #FF3366;
+    border-left: 3px solid #9966FF;
     border-bottom: 1px solid #EBEBEB;
     border-top: 1px solid #EBEBEB;
     border-right: 1px solid #EBEBEB;
@@ -724,9 +724,9 @@ object {
     -webkit-transition: color 200ms ease-in-out;
 }
 blockquote p {
-    background:#FAFAFA;
+    background:#FCFCFC;
     color:#6E6E6E !important;
-    border:1px dashed #999999;
+    border:1px dashed #BFBFBF;
     border-radius: 5px;
     padding:10px 10px 10px 10px;
     margin-bottom:10px;
@@ -734,6 +734,15 @@ blockquote p {
 }
 blockquote p {
     margin:0 auto;
+}
+code {
+    display:block;
+    background:#F2FFF2;
+    color:#714E9E !important;
+    border:1px dashed rgba(113,78,158,0.3);
+    border-radius: 5px;
+    padding:10px 10px 10px 10px;
+    margin-bottom:10px;
 }
 /* =Footer
 ----------------------------------------------- */
@@ -757,7 +766,7 @@ blockquote p {
 }
 .admin-login {
     cursor:default;
-    color:#FF3366 !important;
+    color:#9966FF !important;
 }
 .site-info {
     margin-top: 15px;
@@ -809,10 +818,10 @@ input, textarea {
 	padding: 4px;
 	font-size: 1em;
 	background: #fff;
-	border: 1px solid #AAA;
+	border: 1px solid #CCC;
 	font-family: "Microsoft YaHei","Microsoft YaHei";
-    transition: border 200ms ease-in-out;
-    -webkit-transition: border 200ms ease-in-out;
+    transition: border 200ms ease-in-out,box-shadow 200ms ease-in-out;
+    -webkit-transition: border 200ms ease-in-out,box-shadow 200ms ease-in-out;
 }
 
 input,button,select,textarea {
@@ -822,12 +831,12 @@ textarea {
 	resize:none
 }
 input[type=text]:hover,textarea:hover {
-	border: 1px solid #0091F3 !important;
+	border: 1px solid #9966FF !important;
 }
 
 input[type=text]:focus,textarea:focus {
-	box-shadow: 0px 0px 2px #55A1D4;
-	border: 1px solid #0091F3;
+	box-shadow: 0px 0px 2px #9966FF;
+	border: 1px solid #BB99FF;
 }
 .comment-awaiting-moderation {
     color:red;

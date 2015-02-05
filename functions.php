@@ -132,7 +132,7 @@ function remove_more_link_scroll( $link ) {
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
-add_filter('comment_form_after','replace_submit');
+
 /* comment_mail_notify v1.0 by willin kan. (所有回复都发邮件) */
 function comment_mail_notify($comment_id) {
   $comment = get_comment($comment_id);

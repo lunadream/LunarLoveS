@@ -27,5 +27,5 @@ $(function(){
         });
         $(".textField,#commentForm textarea").focus();
     });
-    $('#colophon').dblclick(function(e){e.stopPropagation();});
+    $('#colophon,input,textarea').dblclick(function(e){e.stopPropagation();});
 });
