@@ -1,0 +1,25 @@
+.butterBar{
+	margin-left:36%;
+	max-width:640px;
+	position:fixed;
+	text-align:center;
+	top:50px;
+	width:58%;
+	z-index:1002
+}
+.butterBar-center{
+	left:50%;
+	margin-left:-320px
+}
+.butterBar-message{
+    color: #FFFFFF;
+	background:rgba(0,204,51,0.8);
+	border-radius: 3px;
+	box-shadow:0px 0px 1px rgba(0,0,0,0.25);
+	font-size:16px;
+	margin-bottom:0;
+	padding:10px 0px 10px 0px;
+}
+.butterBar-error {
+    background: rgba(204,0,51,0.8) !important;
+}

@@ -125,6 +125,14 @@ function unblock_gravatar( $avatar ) {
 }
 add_filter( 'get_avatar', 'unblock_gravatar' );
 
+//remove google open sans font
+function remove_wp_open_sans() {
+    wp_deregister_style( 'open-sans' );
+    wp_register_style( 'open-sans', false );
+}
+add_action('wp_enqueue_scripts', 'remove_wp_open_sans');
+add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
+
 //remove #more-postid
 function remove_more_link_scroll( $link ) {
 	$link = preg_replace( '|#more-[0-9]+|', '', $link );
@@ -132,6 +140,8 @@ function remove_more_link_scroll( $link ) {
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
+//Ajax comment by fatesinger.com,modify by ArianeLu
+require get_template_directory() . '/inc/ajax-comment-init.php';
 
 /* comment_mail_notify v1.0 by willin kan. (所有回复都发邮件) */
 function comment_mail_notify($comment_id) {
@@ -161,7 +171,6 @@ function comment_mail_notify($comment_id) {
 }
 add_action('comment_post', 'comment_mail_notify');
 // -- END ----------------------------------------
-
 class Description_Walker extends Walker_Nav_Menu {
   
 // add classes to ul sub-menus

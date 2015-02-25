@@ -1,20 +1,17 @@
 /*
 Theme Name: LunarLove S
-Theme URI: http://aiyou.im
+Theme URI: http://AiYou.im
 Author: Ariane
-Author URI: http://aiyou.im
+Author URI: http://AiYou.im
 Description: Made With Love / 简单即是美.
-Version: 2.02
-License: GNU General Public License
-License URI: license.txt
+Version: 2.03
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: lunarlove
-Domain Path: /languages/
 Tags:
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
- LunarLove is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+LunarLove S is code by Ariane , (C) 2013-2015 ArianeLu.
+LunarLove S is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -35,7 +32,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
+	font-family:"Roboto","Noto Sans Chinese Regular","Microsoft YaHei","文泉驿微米黑";
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -53,17 +50,16 @@ html {
 body {
 	background: #FFFFFD;
     background-attachment:fixed !important;
-    font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
+    font-family:"Roboto","Noto Sans Chinese Regular","Microsoft YaHei","文泉驿微米黑";
 }
 
-    ::-webkit-scrollbar-thumb:vertical{ 
-        background-color:#FF82C1; 
-    } 
-    ::-webkit-scrollbar{ 
-        width:8px; 
-        background:#FFF; 
-    }
-
+::-webkit-scrollbar-thumb:vertical{ 
+    background-color:#FF82C1; 
+} 
+::-webkit-scrollbar{ 
+    width:8px; 
+    background:#FFF; 
+}
 
 article,
 aside,
@@ -121,7 +117,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
+	font-family:"Roboto","Noto Sans Chinese Regular","Microsoft YaHei","文泉驿微米黑";
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -171,7 +167,7 @@ address {
 }
 pre {
 	background: #eee;
-	font-family:"Roboto","Microsoft YaHei","Noto Sans S Chinese","文泉驿微米黑";
+	font-family:"Roboto","Noto Sans Chinese Regular","Microsoft YaHei","文泉驿微米黑";
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
@@ -244,6 +240,7 @@ input[type="reset"],
 input[type="submit"] {
 	border-radius: 3px;
     transition: box-shadow 0.3s ease-in-out,background 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out,background 0.3s ease-in-out;
     background-color: #FCFCFC;
     border:1px #e5e5e5 solid;
     min-width: 100px;
@@ -315,7 +312,15 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 98%;
 }
-
+::-moz-placeholder { 
+  color: rgba(0,0,0,0.3);
+}
+::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.3); 
+}
+:-ms-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
 /* Links */
 a {
     text-decoration:none;
@@ -565,24 +570,6 @@ object {
 }
 
 
-/* =Widgets
------------------------------------------------ */
-
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
-
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -651,7 +638,8 @@ object {
     width: 130px;
     height:21px;
     margin-top:10px;
-    transition: width 300ms ease-in,background 300ms ease-in,border 200ms ease-in-out,box-shadow 200ms ease-in-out;
+    transition: width 300ms ease-in,background 300ms ease-in,border 300ms ease-in-out,box-shadow 300ms ease-in-out;
+    -webkit-transition: width 300ms ease-in,background 300ms ease-in,border 300ms ease-in-out,box-shadow 300ms ease-in-out;
 }
 .menu-search:hover {
     background-color: rgba(255,255,255,0.9);
@@ -820,8 +808,8 @@ input, textarea {
 	background: #fff;
 	border: 1px solid #CCC;
 	font-family: "Microsoft YaHei","Microsoft YaHei";
-    transition: border 200ms ease-in-out,box-shadow 200ms ease-in-out;
-    -webkit-transition: border 200ms ease-in-out,box-shadow 200ms ease-in-out;
+    transition: border 300ms ease-in-out,box-shadow 300ms ease-in-out;
+    -webkit-transition: border 300ms ease-in-out,box-shadow 300ms ease-in-out;
 }
 
 input,button,select,textarea {
@@ -836,7 +824,7 @@ input[type=text]:hover,textarea:hover {
 
 input[type=text]:focus,textarea:focus {
 	box-shadow: 0px 0px 2px #9966FF;
-	border: 1px solid #BB99FF;
+	border: 1px solid #9966FF !important;
 }
 .comment-awaiting-moderation {
     color:red;
